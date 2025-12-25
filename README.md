@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ReadyUseAuth 🔐
 
-## Getting Started
+ReadyUseAuth is a modern, professional, and ready-to-use authentication boilerplate built with the latest technologies. It provides a solid foundation for Next.js applications that require secure, type-safe authentication out of the box.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Full-Stack Authentication**: Complete Sign-Up and Sign-In flows.
+- **Better Auth Integration**: Leveraging [Better Auth](https://www.better-auth.com/) for secure session management and authentication.
+- **Prisma ORM**: Seamless database interactions with PostgreSQL support.
+- **Modern UI**: Styled with **Tailwind CSS 4** for a clean, responsive, and high-performance interface.
+- **Type-Safe**: Built entirely with **TypeScript** for better developer experience and reliability.
+- **Lucide Icons**: Beautiful icons for a polished look.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Auth**: [Better Auth](https://www.better-auth.com/)
+- **ORM**: [Prisma](https://www.prisma.io/)
+- **Database**: PostgreSQL
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+- [Node.js 18+](https://nodejs.org/)
+- [pnpm](https://pnpm.io/) (Recommended) or npm/yarn
+- A PostgreSQL database (Local or Hosted)
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/RolTriesCode/Ready-to-use-better-auth.git
+   cd Ready-to-use-better-auth
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   pnpm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   DATABASE_URL="postgresql://user:password@localhost:5432/readyuseauth"
+   BETTER_AUTH_SECRET="your-secret-key"
+   BETTER_AUTH_URL="http://localhost:3000"
+   ```
+
+4. **Initialize the database:**
+   ```bash
+   npx prisma db push
+   ```
+
+5. **Run the development server:**
+   ```bash
+   pnpm dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: Next.js App Router (Pages & API routes)
+- `src/components`: Reusable UI components
+- `src/lib`: Configuration for Auth, Prisma, and utility functions
+- `prisma`: Database schema definition
 
-## Learn More
+## 📜 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `pnpm dev`: Runs the app in development mode.
+- `pnpm build`: Builds the app for production.
+- `pnpm start`: Starts the production server.
+- `pnpm lint`: Runs ESLint for code quality checks.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🤝 Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
-## Deploy on Vercel
+## ⚖️ License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+Built with ❤️ by Errol Tabangen(https://github.com/RolTriesCode)
