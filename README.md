@@ -5,6 +5,7 @@ ReadyUseAuth is a modern, professional, and ready-to-use authentication boilerpl
 ## 🚀 Features
 
 - **Full-Stack Authentication**: Complete Sign-Up and Sign-In flows.
+- **Social Login**: Support for Google OAuth.
 - **Better Auth Integration**: Leveraging [Better Auth](https://www.better-auth.com/) for secure session management and authentication.
 - **Prisma ORM**: Seamless database interactions with PostgreSQL support.
 - **Modern UI**: Styled with **Tailwind CSS 4** for a clean, responsive, and high-performance interface.
@@ -48,7 +49,13 @@ Ensure you have the following installed:
    DATABASE_URL="postgresql://user:password@localhost:5432/readyuseauth"
    BETTER_AUTH_SECRET="your-secret-key"
    BETTER_AUTH_URL="http://localhost:3000"
+
+   # Google OAuth
+   GOOGLE_CLIENT_ID="your-google-client-id"
+   GOOGLE_CLIENT_SECRET="your-google-client-secret"
    ```
+
+   **Note:** For Google OAuth, ensure you add `http://localhost:3000/api/auth/callback/google` to your Authorized redirect URIs in the Google Cloud Console.
 
 4. **Initialize the database:**
    ```bash
@@ -76,14 +83,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `pnpm start`: Starts the production server.
 - `pnpm lint`: Runs ESLint for code quality checks.
 
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
 ## ⚖️ License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-Built with ❤️ by Errol Tabangen(https://github.com/RolTriesCode)
